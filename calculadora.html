@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript na prática</title>
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+    <input type="number" id="operando1" placeholder="Valor 1"> <br><br>
+
+    <button onclick="operacao = '+'">Soma</button>
+    <button onclick="operacao = '-'">Subtração</button>
+    <button onclick="operacao = '*'">Mult</button>
+    <button onclick="operacao = '/'">Divisão</button><br><br>
+
+    <input type="number" id="operando2" placeholder="Valor 2" min=1> <br><br>
+
+    <button onclick="calcular()">Igual</button>
+    <input type="number" id="campoResultado">
+    <p id=paragrafoResultado></p>
+    
+    <script>
+
+        var operando1 = document.getElementById("operando1");
+        var operando2 = document.getElementById("operando2");
+        var campoResultado = document.getElementById("campoResultado");
+        var paragrafoResultado = document.getElementById("paragrafoResultado");
+        
+        function calcular() {
+
+            switch (operacao) {
+                case '+':
+                    paragrafoResultado.innerHTML = Number(operando1.value) + Number(operando2.value);
+                    campoResultado.value = Number(operando1.value) + Number(operando2.value);
+                    break;
+
+                case '-':
+                    paragrafoResultado.innerHTML = Number(operando1.value) - Number(operando2.value);
+                    campoResultado.value = Number(operando1.value) - Number(operando2.value);
+                    break;
+
+                case '*':
+                    paragrafoResultado.innerHTML = Number(operando1.value) * Number(operando2.value);
+                    campoResultado.value = Number(operando1.value) * Number(operando2.value);
+                    break;
+
+                case '/':
+                    paragrafoResultado.innerHTML = Number(operando1.value) / Number(operando2.value);
+                    campoResultado.value = Number(operando1.value) / Number(operando2.value);
+                    break;
+            }
+
+            /*if(operacao == '+'){
+                resultado.innerHTML = Number(operando1.value) + Number(operando2.value);
+            }else if(operacao == '-'){
+                resultado.innerHTML = Number(operando1.value) - Number(operando2.value);
+            }else if(operacao == '*') {
+                resultado.innerHTML = Number(operando1.value) * Number(operando2.value);
+            }else {
+                resultado.innerHTML = Number(operando1.value) / Number(operando2.value);
+            }*/
+        }
+
+
+    </script>
+</body>
+
+</html>
